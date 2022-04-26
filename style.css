@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* main define o conteudo que esta dentro do body, assim ele divirde a pagina */
+/* width=largura,heigth=altura,display=especificar o tipo de uma caixa usada por elemento,color=cor,position=posição,font-family=especificar o tipo de modelo da letra,
+font-size=tamanho da letra*/
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    color: #CAB9B9;
+    position: fixed;
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px;
+}
+
+/* moviePoster é um elemento id usado para colocar o icone a div e o numero */
+/* background=usar o tamanho uma imagem de fundo e onde a imagem vai ficar,brackground-size=é o tamanho do fundo*/
+#moviePoster {
+    width: 50%;
+    height: 100%;
+    background: url(img.jpg) no-repeat center; 
+    background-size: cover; 
+    position: relative;
+
+    background-image: 'url(filmenaoencontrado.jpg)';
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* omdbrating é a div que vai conté o icone e o numero*/
+/* transform=permitir girar uma div,ele modifica o espaço de coordenadas de modelos de forma visual no css,padding=define a distâcia entre 
+o conteudo de um elemento e suas bordas. */
+.omdbrating {
+    position: absolute;
+    width: 315.47px;
+    height: 70.49px;
+    
+    left: -90px;
+    bottom: 0;
+
+    padding-left: 90px;
+    padding-top: 10px;
+
+    background: #217C8F;
+    transform: rotate(47.42deg);
+
+    padding-top: 15px;
+}
+#icone {
+    color: #F6C516;
+}
+
+#imdbRating {
+    color: #F4F4F4;
+}
+
+/* background= cor de fundo, box-shadow=é utilizado para adicionar efeitos de sombra em volta de um elemento. z-index=
+especifica a ordem da pilha de um elemento*/
+
+.description {
+    width: 50%;
+    background: #390F0F;
+    box-shadow: inset 0px 0px 120px #090808;
+    padding: 60px 50px;
+    
+    z-index: 2;
+}
+
+/*font-size = tamanho da fonte(letra) */
+#movieTitle {
+    color: #D6D6D6;
+    font-size: 38px;
+    margin-bottom: 30px;
+}
+
+#movieInfo {
+    margin: 25px 0;
+}
+#movieWriter {
+    margin-bottom: 25px;
+}
+
+.infoBlue {
+    color: #217C8F;
+    font-weight: bold;
+}
+
+#movieGenre{
+    margin: 0 20px;
+}
+#formSearch {
+    margin-bottom: 30px;
+}
+
+/* para o butão, borber é para criar borda, solid é para a borda ser solida, e depois coloca a cor, border-radius
+destina-se a definir bordas arredondadas*/
+
+#formSearch input[type='text'] {
+    background-color: #390F0F;
+    padding: 10px 20px;
+    color:  #F4F4F4;
+    font-size: 22px;
+    border: 4px solid #217C8F;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+/* outline=é uma linha que é desenhada em tono de elementos.*/
+#formSearch input[type='text']:focus{
+    outline: none;
+    border: 4px solid #F4F4F4;
+}
+/* propriedade CSS font-weight especifica o peso ou a intensidade da fonte (ex.: negrito). */
+#formSearch input[type='submit'] {
+    padding: 15px 20px;
+    background-color: #217C8F;
+    color:  #F4F4F4;
+    border-radius: 10px;
+    border: none;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+/* responsivo para celular */
+/* display :A propriedade CSS display especifica o tipo de caixa de renderização usada por um elemento. */
+@media (max-width: 700px) {
+
+    main {
+        position: static;
+        display: block;
+        font-size: 18px;
+        /* height: 100%; */
+    }
+
+    #movieTitle { font-size: 24px;
+    }
+
+    #moviePoster {
+        height: 65%;
+        width: 100%;
+    }
+    .description {
+        width: 100%;
+        position: relative;
+        z-index: 3;
+        padding: 8%;
+    }
+
+    #formSearch input[type='text'], #formSearch input[type='submit'] {
+        font-size: 18px;
+        width: 100%;
+    }
+
+  
+}
